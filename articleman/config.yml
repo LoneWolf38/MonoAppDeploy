@@ -1,0 +1,10 @@
+dev:
+  dburi: "mongodb+srv://drake:root@articleman-iowgs.mongodb.net/articleman?retryWrites=true&w=majority"
+  dbName: "articleman"
+  userColName: "users"
+  articleColName: "articles"
+prod:
+  dburi: ""
+  dbName: ""
+  userColName: ""
+  articleman: ""
