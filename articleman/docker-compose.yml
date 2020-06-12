@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  webapp:
+    container_name: "goapp"
+    build: .
+    ports:
+      - '8080:8080'
+    depends:
+      - "mongoimg"
+  mongo:
+    image: 'mongo:latest'
+    container_name: 'mongoimg'
+    ports:
+      - '27017:27017'

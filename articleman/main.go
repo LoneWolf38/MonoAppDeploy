@@ -9,8 +9,12 @@ import (
 )
 
 var router *gin.Engine
+var configName string
 
 func main() {
+	flag.StringVar(&configName, "config", "config", "Config file name")
+	flag.Parse()
+	InitConfig()
 	// Set Gin to production mode
 	gin.SetMode(gin.ReleaseMode)
 
@@ -25,7 +29,7 @@ func main() {
 	InitializeRoutes()
 
 	// Start serving the application
-	router.Run()
+	router.Run("0.0.0.0:8080")
 }
 
 // Render one of HTML, JSON or CSV based on the 'Accept' header of the request
