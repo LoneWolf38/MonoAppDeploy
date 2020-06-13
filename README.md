@@ -16,6 +16,20 @@ The DevOps approach to this small project/webapp will start from the dev all the
 	- Packaging the builds with QA approved tests
 	- Deploying the ready builds to the prod servers 
 
+#### Setting up the Environments
+I used packer for creating the Provisioned AMI for Production Instances
+To setup the Production Environments I have used Terraform for creating the infrastructure
+This is my AWS architecture Setup 
+
+
+
+![aws](images/aws.png)
+
+
+
+I used Ansible to setup the Build servers and install jenkins 
+
+
 ##### Development and testing 
 
 
